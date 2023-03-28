@@ -2,9 +2,17 @@ namespace ObjectAndType {
   const person = {
     name: "miku",
     age: 16,
+    hobbies: ["Sports", "Cooking"]
   };
 
   console.log(person);
+
+  let favoriteActivities: string[];
+  favoriteActivities = ["Sports"];
+
+  for (const hobby of person.hobbies) {
+    console.log(hobby.toUpperCase());
+  }
 
   // ----- ネスト -----
   const product = {
