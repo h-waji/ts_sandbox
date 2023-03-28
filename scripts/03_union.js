@@ -1,7 +1,6 @@
 var Sandbox03;
 (function (Sandbox03) {
-    function combine(input1, input2, resultConversion // Union と Literal の組み合わせ
-    ) {
+    function combine(input1, input2, resultConversion) {
         var result;
         if ((typeof input1 === "number" && typeof input2 === "number") ||
             resultConversion === "as-number") {

@@ -1,8 +1,11 @@
 namespace Sandbox03 {
+  type Combinable = number | string;
+  type ConversionDescriptor = "as-number" | "as-text"; // Union と Literal の組み合わせ
+
   function combine(
-    input1: number | string,
-    input2: number | string,
-    resultConversion: "as-number" | "as-text" // Union と Literal の組み合わせ
+    input1: Combinable,
+    input2: Combinable,
+    resultConversion: ConversionDescriptor
   ) {
     let result;
     if (
