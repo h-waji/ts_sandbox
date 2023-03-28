@@ -14,7 +14,7 @@ namespace ObjectAndType {
     name: "miku",
     age: 16,
     hobbies: ["Sports", "Cooking"],
-    role: [2, "author"]
+    role: [2, "author"],
   };
 
   console.log(person);
@@ -38,4 +38,22 @@ namespace ObjectAndType {
   };
 
   console.log(product);
+
+  // ----- Enum -----
+  enum Role {
+    ADMIN,
+    READ_ONLY,
+    AUTHOR,
+  }
+
+  const user = {
+    name: "skeleton",
+    age: 100,
+    hobbies: ["Sports", "Cooking"],
+    role: Role.ADMIN,
+  };
+
+  if (user.role === Role.ADMIN) {
+    console.log("管理者ユーザ");
+  }
 }
