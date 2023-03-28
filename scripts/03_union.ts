@@ -9,7 +9,7 @@ namespace Sandbox03 {
   ) {
     let result;
     if (
-      (typeof input1 === "number" && typeof input2 === "number") || 
+      (typeof input1 === "number" && typeof input2 === "number") ||
       resultConversion === "as-number"
     ) {
       result = +input1 + +input2;
@@ -28,3 +28,27 @@ namespace Sandbox03 {
   const combineNames = combine("Mario", "Wario", "as-text");
   console.log(combineNames);
 }
+
+// ----- エイリアス型とオブジェクト型 -----
+
+// function greet(user: { name: string; age: number }) {
+//   console.log("Hi, I am " + user.name);
+// }
+
+// function isOlder(user: { name: string; age: number }, checkAge: number) {
+//   return checkAge > user.age;
+// }
+
+type User = { name: string; age: number };
+
+function greet(user: User) {
+  console.log("Hi, I am " + user.name);
+}
+
+function isOlder(user: User, checkAge: number) {
+  return checkAge > user.age;
+}
+
+const user = { name: "Taro", age: 50 };
+greet(user);
+console.log(isOlder(user, 35));

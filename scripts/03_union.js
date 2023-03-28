@@ -18,3 +18,12 @@ var Sandbox03;
     var combineNames = combine("Mario", "Wario", "as-text");
     console.log(combineNames);
 })(Sandbox03 || (Sandbox03 = {}));
+function greet(user) {
+    console.log("Hi, I am " + user.name);
+}
+function isOlder(user, checkAge) {
+    return checkAge > user.age;
+}
+var user = { name: "Taro", age: 50 };
+greet(user);
+console.log(isOlder(user, 35));
