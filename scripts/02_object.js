@@ -1,9 +1,16 @@
 var ObjectAndType;
 (function (ObjectAndType) {
+    // const person = {
+    //   name: "miku",
+    //   age: 16,
+    //   hobbies: ["Sports", "Cooking"],
+    //   role: [2, "author"] // => このようなケースはTypeScriptは型推論できない
+    // };
     var person = {
         name: "miku",
         age: 16,
-        hobbies: ["Sports", "Cooking"]
+        hobbies: ["Sports", "Cooking"],
+        role: [2, "author"]
     };
     console.log(person);
     var favoriteActivities;

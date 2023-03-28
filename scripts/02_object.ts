@@ -1,8 +1,20 @@
 namespace ObjectAndType {
-  const person = {
+  // const person = {
+  //   name: "miku",
+  //   age: 16,
+  //   hobbies: ["Sports", "Cooking"],
+  //   role: [2, "author"] // => このようなケースはTypeScriptは型推論できない
+  // };
+  const person: {
+    name: string;
+    age: number;
+    hobbies: string[];
+    role: [number, string]; // Tuple
+  } = {
     name: "miku",
     age: 16,
-    hobbies: ["Sports", "Cooking"]
+    hobbies: ["Sports", "Cooking"],
+    role: [2, "author"]
   };
 
   console.log(person);
