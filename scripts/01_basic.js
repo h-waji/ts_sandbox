@@ -1,5 +1,5 @@
-var Basic;
-(function (Basic) {
+var Sandbox01;
+(function (Sandbox01) {
     var hello = "Hello TypeScript";
     console.log(hello);
     // ----- 型 -----
@@ -21,4 +21,4 @@ var Basic;
     var printResult = true;
     var resultPhrase = "Result: ";
     add(number1, number2, printResult, resultPhrase);
-})(Basic || (Basic = {}));
+})(Sandbox01 || (Sandbox01 = {}));

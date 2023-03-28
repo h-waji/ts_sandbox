@@ -1,5 +1,5 @@
-var ObjectAndType;
-(function (ObjectAndType) {
+var Sandbox02;
+(function (Sandbox02) {
     // const person = {
     //   name: "miku",
     //   age: 16,
@@ -46,4 +46,4 @@ var ObjectAndType;
     if (user.role === Role.ADMIN) {
         console.log("管理者ユーザ");
     }
-})(ObjectAndType || (ObjectAndType = {}));
+})(Sandbox02 || (Sandbox02 = {}));

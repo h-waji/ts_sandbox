@@ -1,4 +1,4 @@
-namespace ObjectAndType {
+namespace Sandbox02 {
   // const person = {
   //   name: "miku",
   //   age: 16,

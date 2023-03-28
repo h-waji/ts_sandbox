@@ -1,4 +1,4 @@
-namespace Basic {
+namespace Sandbox01 {
   const hello = "Hello TypeScript";
   console.log(hello);
 
