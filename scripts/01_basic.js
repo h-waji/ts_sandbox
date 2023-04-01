@@ -1,6 +1,7 @@
+"use strict";
 var Sandbox01;
 (function (Sandbox01) {
-    var hello = "Hello TypeScript";
+    const hello = "Hello TypeScript";
     console.log(hello);
     // ----- 型 -----
     function add(n1, n2, showResult, phrase) {
@@ -8,7 +9,7 @@ var Sandbox01;
         // if(typeof n1 !== "number" || typeof n2 !== "number") {
         //   throw new Error("入力値が不正です");
         // }
-        var result = n1 + n2;
+        const result = n1 + n2;
         if (showResult) {
             console.log(phrase + result);
         }
@@ -16,9 +17,9 @@ var Sandbox01;
             return result;
         }
     }
-    var number1 = 3;
-    var number2 = 4.5;
-    var printResult = true;
-    var resultPhrase = "Result: ";
+    const number1 = 3;
+    const number2 = 4.5;
+    const printResult = true;
+    const resultPhrase = "Result: ";
     add(number1, number2, printResult, resultPhrase);
 })(Sandbox01 || (Sandbox01 = {}));

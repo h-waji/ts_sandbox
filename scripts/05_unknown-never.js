@@ -1,7 +1,8 @@
+"use strict";
 var Sandbox05;
 (function (Sandbox05) {
-    var userInput; // 型チェックの強制
-    var userName;
+    let userInput; // 型チェックの強制
+    let userName;
     userInput = 5;
     userInput = "hoge";
     if (typeof userInput === "string") {
@@ -10,6 +11,6 @@ var Sandbox05;
     function generateError(message, code) {
         throw { message: message, errorCode: code };
     }
-    var result = generateError("エラーが発生しました", 500);
+    const result = generateError("エラーが発生しました", 500);
     console.log(result);
 })(Sandbox05 || (Sandbox05 = {}));

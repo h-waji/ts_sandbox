@@ -1,3 +1,4 @@
+"use strict";
 var Sandbox04;
 (function (Sandbox04) {
     function add(n1, n2) {
@@ -7,14 +8,14 @@ var Sandbox04;
         console.log('Result: ' + num);
     }
     printResult(add(4, 1));
-    var combineValues;
+    let combineValues;
     combineValues = add;
     console.log(combineValues(10, 22));
     function addAndHandle(n1, n2, cb) {
-        var result = n1 + n2;
+        const result = n1 + n2;
         cb(result);
     }
-    addAndHandle(10, 20, function (result) {
+    addAndHandle(10, 20, (result) => {
         console.log(result);
         return result;
     });
