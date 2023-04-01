@@ -1,7 +1,7 @@
 "use strict";
 var Sandbox05;
 (function (Sandbox05) {
-    let userInput; // 型チェックの強制
+    let userInput;
     let userName;
     userInput = 5;
     userInput = "hoge";

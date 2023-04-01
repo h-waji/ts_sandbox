@@ -1,12 +1,6 @@
 "use strict";
 var Sandbox02;
 (function (Sandbox02) {
-    // const person = {
-    //   name: "miku",
-    //   age: 16,
-    //   hobbies: ["Sports", "Cooking"],
-    //   role: [2, "author"] // => このようなケースはTypeScriptは型推論できない
-    // };
     const person = {
         name: "miku",
         age: 16,
@@ -19,7 +13,6 @@ var Sandbox02;
     for (const hobby of person.hobbies) {
         console.log(hobby.toUpperCase());
     }
-    // ----- ネスト -----
     const product = {
         id: "vocaloid001",
         price: 0,
@@ -30,7 +23,6 @@ var Sandbox02;
         },
     };
     console.log(product);
-    // ----- Enum -----
     let Role;
     (function (Role) {
         Role[Role["ADMIN"] = 0] = "ADMIN";
