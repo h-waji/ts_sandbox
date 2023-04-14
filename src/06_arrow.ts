@@ -4,7 +4,8 @@ namespace Sandbox06 {
   // const add = (a: number, b: number) => {
   //   return a + b;
   // };
-  const add = (a: number, b: number) => a + b;
+  // デフォルト値は一番右か全部に
+  const add = (a: number, b: number = 1) => a + b;
 
   // const printOutput = (output: string | number) => {
   //   console.log(output);
@@ -14,7 +15,7 @@ namespace Sandbox06 {
     console.log(output);
   }
 
-  console.log(add(4, 14));
+  console.log(add(4));
   printOutput(add(4, 14));
 
   const button = document.querySelector('button');
