@@ -18,3 +18,4 @@ var Sandbox01;
     const resultPhrase = "Result: ";
     add(number1, number2, printResult, resultPhrase);
 })(Sandbox01 || (Sandbox01 = {}));
+//# sourceMappingURL=01_basic.js.map

@@ -14,3 +14,4 @@ var Sandbox05;
     const result = generateError("エラーが発生しました", 500);
     console.log(result);
 })(Sandbox05 || (Sandbox05 = {}));
+//# sourceMappingURL=05_unknown-never.js.map

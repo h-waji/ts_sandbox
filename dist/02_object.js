@@ -39,3 +39,4 @@ var Sandbox02;
         console.log("管理者ユーザ");
     }
 })(Sandbox02 || (Sandbox02 = {}));
+//# sourceMappingURL=02_object.js.map

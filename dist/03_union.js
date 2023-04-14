@@ -28,3 +28,4 @@ var Sandbox03;
     greet(user);
     console.log(isOlder(user, 35));
 })(Sandbox03 || (Sandbox03 = {}));
+//# sourceMappingURL=03_union.js.map
