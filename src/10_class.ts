@@ -4,7 +4,7 @@ namespace Sandbox10 {
   class Department {
     // private readonly id: string;
     // name: string;
-    private employees: string[] = [];
+    protected employees: string[] = [];
 
     constructor(private readonly id: string, public name: string) {
       // this.id = id;
@@ -45,6 +45,12 @@ namespace Sandbox10 {
     printReports() {
       console.log(this.reports);
     }
+
+    addEmployee(name: string) {
+      if (name === 'Joe') return;
+
+      this.employees.push(name);
+    }
   }
 
   const it = new ITDepartment('d1', ['Joe']);
@@ -64,4 +70,8 @@ namespace Sandbox10 {
   const accounting = new AccountingDepartment('d2', []);
   accounting.addReport('Something');
   accounting.printReports();
+
+  accounting.addEmployee('Joe');
+  accounting.addEmployee('Bob');
+  accounting.printEmployeeInformation();
 }
