@@ -2,11 +2,11 @@ namespace Sandbox10 {
   console.log("----- 10 -----");
 
   class Department {
-    // private id: string;
+    // private readonly id: string;
     // name: string;
     private employees: string[] = [];
 
-    constructor(private id: string, public name: string) {
+    constructor(private readonly id: string, public name: string) {
       // this.id = id;
       // this.name = n;
     }
@@ -25,16 +25,43 @@ namespace Sandbox10 {
     }
   }
 
-  const accounting = new Department('d1', 'Accounting');
-  console.log(accounting);
-  accounting.describe();
+  class ITDepartment extends Department {
+    admins: string[];
+    constructor(id: string, admins: string[]) {
+      super(id, 'IT');
+      this.admins = admins;
+    }
+  }
 
-  accounting.addEmployee("Obama");
-  accounting.addEmployee("Trump");
-  accounting.addEmployee("Biden");
-  accounting.printEmployeeInformation();
+  class AccountingDepartment extends Department {
+    constructor(id: string, private reports: string[]) {
+      super(id, 'Accounting');
+    }
+
+    addReport(text: string) {
+      this.reports.push(text);
+    }
+
+    printReports() {
+      console.log(this.reports);
+    }
+  }
+
+  const it = new ITDepartment('d1', ['Joe']);
+  console.log(it);
+  it.describe();
+
+  it.addEmployee("Obama");
+  it.addEmployee("Trump");
+  it.addEmployee("Biden");
+  it.printEmployeeInformation();
+
+  console.log(it);
 
   // const accountingCopy = { name: 'DUMMY', describe: accounting.describe };
   // accountingCopy.describe();
 
+  const accounting = new AccountingDepartment('d2', []);
+  accounting.addReport('Something');
+  accounting.printReports();
 }
