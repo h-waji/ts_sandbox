@@ -42,6 +42,7 @@ namespace Sandbox10 {
 
   class AccountingDepartment extends Department {
     private lastReport: string;
+    private static instance: AccountingDepartment;
 
     get mostRecentReport() {
       if (this.lastReport) {
@@ -57,9 +58,17 @@ namespace Sandbox10 {
       this.addReport(value);
     }
 
-    constructor(id: string, private reports: string[]) {
+    private constructor(id: string, private reports: string[]) {
       super(id, 'Accounting');
       this.lastReport = reports[0];
+    }
+
+    static getInstance() {
+      if (this.instance) {
+        return this.instance;
+      }
+      this.instance = new AccountingDepartment('d2', []);
+      return this.instance;
     }
 
     addReport(text: string) {
@@ -99,7 +108,9 @@ namespace Sandbox10 {
   // const accountingCopy = { name: 'DUMMY', describe: accounting.describe };
   // accountingCopy.describe();
 
-  const accounting = new AccountingDepartment('d2', []);
+  // const accounting = new AccountingDepartment('d2', []);
+  const accounting = AccountingDepartment.getInstance();
+
   accounting.describe();
   accounting.mostRecentReport = '通期会計レポート';
   accounting.addReport('Something');
