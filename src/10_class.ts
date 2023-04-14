@@ -1,7 +1,7 @@
 namespace Sandbox10 {
   console.log("----- 10 -----");
 
-  class Department {
+  abstract class Department {
     static fiscalYear = 2023;
     // private readonly id: string;
     // name: string;
@@ -11,14 +11,12 @@ namespace Sandbox10 {
       return { name: name };
     }
 
-    constructor(private readonly id: string, public name: string) {
+    constructor(protected readonly id: string, public name: string) {
       // this.id = id;
       // this.name = n;
     }
 
-    describe(this: Department) {
-      console.log(`Department (${this.id}): ${this.name}`);
-    }
+    abstract describe(this: Department): void;
 
     addEmployee(employee: string) {
       this.employees.push(employee);
@@ -35,6 +33,10 @@ namespace Sandbox10 {
     constructor(id: string, admins: string[]) {
       super(id, 'IT');
       this.admins = admins;
+    }
+
+    describe() {
+      console.log(`IT部門 - ID: ${this.id}`);
     }
   }
 
@@ -74,6 +76,10 @@ namespace Sandbox10 {
 
       this.employees.push(name);
     }
+
+    describe() {
+      console.log(`会計部門 - ID: ${this.id}`);
+    }
   }
 
   const employee1 = Department.createEmployee('Boby');
@@ -94,7 +100,7 @@ namespace Sandbox10 {
   // accountingCopy.describe();
 
   const accounting = new AccountingDepartment('d2', []);
-
+  accounting.describe();
   accounting.mostRecentReport = '通期会計レポート';
   accounting.addReport('Something');
   console.log(accounting.mostRecentReport);
