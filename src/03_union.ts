@@ -1,4 +1,6 @@
 namespace Sandbox03 {
+  console.log("----- 03 -----");
+
   type Combinable = number | string;
   type ConversionDescriptor = "as-number" | "as-text"; // Union と Literal の組み合わせ
 

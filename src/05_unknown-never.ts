@@ -1,4 +1,6 @@
 namespace Sandbox05 {
+  console.log("----- 05 -----");
+
   let userInput: unknown; // 型チェックの強制
   let userName: string;
 

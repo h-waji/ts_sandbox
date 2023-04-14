@@ -1,6 +1,7 @@
 "use strict";
 var Sandbox05;
 (function (Sandbox05) {
+    console.log("----- 05 -----");
     let userInput;
     let userName;
     userInput = 5;

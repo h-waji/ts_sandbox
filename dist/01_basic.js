@@ -1,6 +1,7 @@
 "use strict";
 var Sandbox01;
 (function (Sandbox01) {
+    console.log("----- 01 -----");
     const hello = "Hello TypeScript";
     console.log(hello);
     function add(n1, n2, showResult, phrase) {

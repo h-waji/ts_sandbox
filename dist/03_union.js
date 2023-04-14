@@ -1,6 +1,7 @@
 "use strict";
 var Sandbox03;
 (function (Sandbox03) {
+    console.log("----- 03 -----");
     function combine(input1, input2, resultConversion) {
         let result;
         if ((typeof input1 === "number" && typeof input2 === "number") ||

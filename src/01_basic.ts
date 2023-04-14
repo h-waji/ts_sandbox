@@ -1,4 +1,6 @@
 namespace Sandbox01 {
+  console.log("----- 01 -----");
+
   const hello = "Hello TypeScript";
   console.log(hello);
 

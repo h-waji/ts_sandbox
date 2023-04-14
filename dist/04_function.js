@@ -1,6 +1,7 @@
 "use strict";
 var Sandbox04;
 (function (Sandbox04) {
+    console.log("----- 04 -----");
     function add(n1, n2) {
         return n1 + n2;
     }

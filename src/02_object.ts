@@ -1,4 +1,5 @@
 namespace Sandbox02 {
+  console.log("----- 02 -----");
   // const person = {
   //   name: "miku",
   //   age: 16,
