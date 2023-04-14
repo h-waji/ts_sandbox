@@ -2,9 +2,14 @@ namespace Sandbox10 {
   console.log("----- 10 -----");
 
   class Department {
+    static fiscalYear = 2023;
     // private readonly id: string;
     // name: string;
     protected employees: string[] = [];
+
+    static createEmployee(name: string) {
+      return { name: name };
+    }
 
     constructor(private readonly id: string, public name: string) {
       // this.id = id;
@@ -70,6 +75,9 @@ namespace Sandbox10 {
       this.employees.push(name);
     }
   }
+
+  const employee1 = Department.createEmployee('Boby');
+  console.log(employee1, Department.fiscalYear);
 
   const it = new ITDepartment('d1', ['Joe']);
   console.log(it);
