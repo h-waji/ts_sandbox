@@ -113,4 +113,14 @@ namespace Sandbox12 {
   if (userInputElement) {
     (userInputElement as HTMLInputElement).value = "Hello!";
   }
+
+  interface ErrorContainer {
+    [prop: string]: string;
+  }
+
+  const errorBag: ErrorContainer = {
+    email: '正しいメールアドレスではありません。', 
+    username: 'ユーザー名に記号を含めることはできません。', 
+  };
+
 }
