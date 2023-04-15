@@ -1,6 +1,7 @@
 namespace Sandbox12 {
   console.log("----- 12 -----");
 
+  // ----- Intersection Types -----
   type Admin = {
     name: string;
     privileges: string[];
@@ -20,6 +21,7 @@ namespace Sandbox12 {
     startDate: new Date(),
   }
 
+  // ----- Type Guards -----
   type Combinable = string | number;
   type Numeric = number | boolean;
 
@@ -80,6 +82,7 @@ namespace Sandbox12 {
   useVehicle(v1);
   useVehicle(v2);
 
+  // ----- Discriminated Unions -----
   interface Bird {
     type: 'bird';
     flyingSpeed: number;
@@ -107,6 +110,7 @@ namespace Sandbox12 {
 
   moveAnimal({ type: 'bird', flyingSpeed: 10 });
 
+  // ----- Type Casting -----
   // const userInputElement = <HTMLInputElement>document.getElementById("user-input")!;
   // const userInputElement = document.getElementById("user-input")! as HTMLInputElement;
   const userInputElement = document.getElementById("user-input");
@@ -114,6 +118,7 @@ namespace Sandbox12 {
     (userInputElement as HTMLInputElement).value = "Hello!";
   }
 
+  // ----- Index Types -----
   interface ErrorContainer {
     [prop: string]: string;
   }
