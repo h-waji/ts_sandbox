@@ -12,7 +12,8 @@ namespace Sandbox11 {
   };
 
   interface Named {
-    readonly name: string;
+    readonly name?: string;
+    outputName?: string;
   }
 
   interface Greetable extends Named {
@@ -20,21 +21,33 @@ namespace Sandbox11 {
   }
 
   class Person implements Greetable {
-    name: string;
-    age: number;
+    name?: string;
+    age?: number;
 
-    constructor(name: string, age: number) {
-      this.name = name;
-      this.age = age;
+    constructor(name?: string, age?: number) {
+      if (name) {
+        this.name = name;
+      }
+      if (age) {
+        this.age = age;
+      }
     }
 
     greet(phrase: string) {
-      console.log(phrase, this.name);
+      if (this.name) {
+        console.log(phrase, this.name);
+      } else {
+        console.log('Hello!');
+      }
     }
   }
 
   let user1: Greetable;
   user1 = new Person('Obama', 61);
   user1.greet('Hello my name is');
+
+  let user2: Greetable;
+  user2 = new Person();
+  user2.greet('');
 
 }
