@@ -1,6 +1,16 @@
 namespace Sandbox11 {
   console.log("----- 11 -----");
 
+  // type AddFn = (a: number, b: number) => number;
+  interface AddFn {
+    (a: number, b:number): number;
+  }
+
+  let add: AddFn;
+  add = (a: number, b: number) => {
+    return a + b;
+  };
+
   interface Named {
     readonly name: string;
   }
