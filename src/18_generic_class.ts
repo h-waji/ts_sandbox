@@ -38,4 +38,28 @@ namespace Sandbox18 {
   // // ...
   // objStorage.removeItem(obj);
   // console.log(objStorage.getItems());
+
+  // ----- Partial -----
+  interface CourseGoal {
+    title: string;
+    description: string;
+    completeUntile: Date;
+  }
+
+  function createCourseGoal(title: string, description: string, date: Date): CourseGoal {
+    // return {
+    //   title: title, description: description, completeUntile: date,
+    // };
+    let courseGoal: Partial<CourseGoal> = {};
+    courseGoal.title = title;
+    courseGoal.description = description;
+    courseGoal.completeUntile = date;
+    return courseGoal as CourseGoal;
+  }
+
+  // ----- Readonly -----
+  const names: Readonly<string[]> = ['Miku', 'Rin'];
+  // names.push('Len');
+  // names.pop();
+
 }
