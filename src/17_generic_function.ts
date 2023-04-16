@@ -11,7 +11,7 @@ namespace Sandbox17 {
   const mergedObj = merge({ name: 'Obama' }, { age: 61 });
   console.log(mergedObj.age);
 
-
+  // ----- Constraints using interfaces -----
   interface Lengty {
     length: number;
   }
@@ -25,4 +25,11 @@ namespace Sandbox17 {
   }
 
   console.log(countAndDescribe('今日は雨が降っています。'));
+
+  // ----- keyof -----
+  function extractAndConvert<T extends object, U extends keyof T>(obj: T, key: U) {
+    return 'Value: ' + obj[key];
+  }
+
+  extractAndConvert({ name: 'Bob' }, 'name');
 }
