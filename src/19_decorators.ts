@@ -8,7 +8,17 @@ namespace Sandbox19 {
     }
   }
 
+  function WithTemplate(template: string, hookId: string) {
+    return function(_: Function) {
+      const hookEl = document.getElementById(hookId);
+      if (hookEl) {
+        hookEl.innerHTML = template;
+      }
+    }
+  }
+
   @Logger('LOG: Person')
+  @WithTemplate('<h1>Person Object</h1>', 'app')
   class Person {
     name = 'Obama';
     constructor() {
