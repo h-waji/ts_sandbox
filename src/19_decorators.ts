@@ -1,12 +1,14 @@
 namespace Sandbox19 {
   console.log("----- 19 -----");
 
-  function Logger(constructor: Function) {
-    console.log('ログ出力中');
-    console.log(constructor);
+  function Logger(logString: string) {
+    return function(constructor: Function) {
+      console.log(logString);
+      console.log(constructor);
+    }
   }
 
-  @Logger
+  @Logger('LOG: Person')
   class Person {
     name = 'Obama';
     constructor() {
