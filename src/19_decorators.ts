@@ -9,10 +9,20 @@ namespace Sandbox19 {
   }
 
   function WithTemplate(template: string, hookId: string) {
-    return function(_: Function) {
-      const hookEl = document.getElementById(hookId);
-      if (hookEl) {
-        hookEl.innerHTML = template;
+    console.log('Template factory');
+
+    return function<T extends {new(...args: any[]): {name: string}}>(originalConstructor: T) {
+      // class は constructor のシンタックスシュガー
+      return class extends originalConstructor {
+        constructor(..._: any[]) {
+          super();
+          console.log('Print template');
+          const hookEl = document.getElementById(hookId);
+          if (hookEl) {
+            hookEl.innerHTML = template;
+            hookEl.querySelector('h1')!.textContent = this.name;
+          }
+        }
       }
     }
   }
