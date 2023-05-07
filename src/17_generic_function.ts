@@ -1,35 +1,35 @@
-namespace Sandbox17 {
-  console.log("----- 17 -----");
+// namespace Sandbox17 {
+//   console.log("----- 17 -----");
 
-  // function merge(objA: object, objB: object) {
-  //   return Object.assign(objA, objB);
-  // }
-  function merge<T extends object, U extends object>(objA: T, objB: U) {
-    return Object.assign(objA, objB);
-  }
+//   // function merge(objA: object, objB: object) {
+//   //   return Object.assign(objA, objB);
+//   // }
+//   function merge<T extends object, U extends object>(objA: T, objB: U) {
+//     return Object.assign(objA, objB);
+//   }
 
-  const mergedObj = merge({ name: 'Obama' }, { age: 61 });
-  console.log(mergedObj.age);
+//   const mergedObj = merge({ name: 'Obama' }, { age: 61 });
+//   console.log(mergedObj.age);
 
-  // ----- Constraints using interfaces -----
-  interface Lengty {
-    length: number;
-  }
+//   // ----- Constraints using interfaces -----
+//   interface Lengty {
+//     length: number;
+//   }
 
-  function countAndDescribe<T extends Lengty>(element: T): [T, string] {
-    let discriptionText = '値がありません。';
-    if (element.length > 0) {
-      discriptionText = `値は${element.length}個です。`;
-    }
-    return [element, discriptionText];
-  }
+//   function countAndDescribe<T extends Lengty>(element: T): [T, string] {
+//     let discriptionText = '値がありません。';
+//     if (element.length > 0) {
+//       discriptionText = `値は${element.length}個です。`;
+//     }
+//     return [element, discriptionText];
+//   }
 
-  console.log(countAndDescribe('今日は雨が降っています。'));
+//   console.log(countAndDescribe('今日は雨が降っています。'));
 
-  // ----- keyof -----
-  function extractAndConvert<T extends object, U extends keyof T>(obj: T, key: U) {
-    return 'Value: ' + obj[key];
-  }
+//   // ----- keyof -----
+//   function extractAndConvert<T extends object, U extends keyof T>(obj: T, key: U) {
+//     return 'Value: ' + obj[key];
+//   }
 
-  extractAndConvert({ name: 'Bob' }, 'name');
-}
+//   extractAndConvert({ name: 'Bob' }, 'name');
+// }
