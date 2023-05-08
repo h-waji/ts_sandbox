@@ -1,60 +1,57 @@
-// namespace Sandbox02 {
-//   console.log("----- 02 -----");
-//   // const person = {
-//   //   name: "miku",
-//   //   age: 16,
-//   //   hobbies: ["Sports", "Cooking"],
-//   //   role: [2, "author"] // => このようなケースはTypeScriptは型推論できない
-//   // };
-//   const person: {
-//     name: string;
-//     age: number;
-//     hobbies: string[];
-//     role: [number, string]; // Tuple
-//   } = {
-//     name: "miku",
-//     age: 16,
-//     hobbies: ["Sports", "Cooking"],
-//     role: [2, "author"],
-//   };
-
-//   console.log(person);
-
-//   let favoriteActivities: string[];
-//   favoriteActivities = ["Sports"];
-
-//   for (const hobby of person.hobbies) {
-//     console.log(hobby.toUpperCase());
-//   }
-
-//   // ----- ネスト -----
-//   const product = {
-//     id: "vocaloid001",
-//     price: 0,
-//     singers: ["Rin", "Len"],
-//     details: {
-//       title: "Rettojoto",
-//       description: "xxxxxxxxxx xxxxxxxxxx xxxxxxxxxx",
-//     },
-//   };
-
-//   console.log(product);
-
-//   // ----- Enum -----
-//   enum Role {
-//     ADMIN,
-//     READ_ONLY,
-//     AUTHOR,
-//   }
-
-//   const user = {
-//     name: "skeleton",
-//     age: 100,
-//     hobbies: ["Sports", "Cooking"],
-//     role: Role.ADMIN,
-//   };
-
-//   if (user.role === Role.ADMIN) {
-//     console.log("管理者ユーザ");
-//   }
+// const person = {
+//   name: "Max",
+//   age: 50,
+//   hobbies: ["Modelling", "Illustration"],
+//   role: [2, "author"]
 // }
+
+const person: {
+  name: string;
+  age: number;
+  hobbies: string[];
+  role: [number, string];
+} = {
+  name: "Obama",
+  age: 61,
+  hobbies: ["Agitation", "Golf"],
+  role: [2, "author"]
+}
+
+console.log(person);
+
+let favoriteActivities: string[] = ["Agitation"];
+console.log(favoriteActivities);
+
+for (const hobby of person.hobbies) {
+  console.log(hobby.toUpperCase());
+}
+
+const product = {
+  id: "p0001",
+  price: 300,
+  tags: ["MintTea", "Mint", "Tea"],
+  details: {
+    name: "Oishi Mint Tea",
+    description: "Oishi Mint Tea desu."
+  },
+};
+
+console.log(product);
+console.log(product.details.name, product.details.description);
+
+enum Role {
+  ADMIN,
+  READ_ONLY,
+  AUTHOR
+}
+
+const user = {
+  name: "Nobunaga",
+  age: 47,
+  hobbies: ["Agitation", "Cuckoo"],
+  role: Role.ADMIN
+}
+
+if (user.role === Role.ADMIN) {
+  console.log("管理者：", user.name);
+}
