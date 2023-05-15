@@ -1,57 +1,61 @@
-// const person = {
-//   name: "Max",
-//   age: 50,
-//   hobbies: ["Modelling", "Illustration"],
-//   role: [2, "author"]
-// }
+namespace Sandbox02 {
+  console.log("----- 02 -----");
 
-const person: {
-  name: string;
-  age: number;
-  hobbies: string[];
-  role: [number, string];
-} = {
-  name: "Obama",
-  age: 61,
-  hobbies: ["Agitation", "Golf"],
-  role: [2, "author"]
-}
+  // const person = {
+  //   name: "Max",
+  //   age: 50,
+  //   hobbies: ["Modelling", "Illustration"],
+  //   role: [2, "author"]
+  // }
 
-console.log(person);
+  const person: {
+    name: string;
+    age: number;
+    hobbies: string[];
+    role: [number, string];
+  } = {
+    name: "Obama",
+    age: 61,
+    hobbies: ["Agitation", "Golf"],
+    role: [2, "author"],
+  };
 
-let favoriteActivities: string[] = ["Agitation"];
-console.log(favoriteActivities);
+  console.log(person);
 
-for (const hobby of person.hobbies) {
-  console.log(hobby.toUpperCase());
-}
+  let favoriteActivities: string[] = ["Agitation"];
+  console.log(favoriteActivities);
 
-const product = {
-  id: "p0001",
-  price: 300,
-  tags: ["MintTea", "Mint", "Tea"],
-  details: {
-    name: "Oishi Mint Tea",
-    description: "Oishi Mint Tea desu."
-  },
-};
+  for (const hobby of person.hobbies) {
+    console.log(hobby.toUpperCase());
+  }
 
-console.log(product);
-console.log(product.details.name, product.details.description);
+  const product = {
+    id: "p0001",
+    price: 300,
+    tags: ["MintTea", "Mint", "Tea"],
+    details: {
+      name: "Oishi Mint Tea",
+      description: "Oishi Mint Tea desu.",
+    },
+  };
 
-enum Role {
-  ADMIN,
-  READ_ONLY,
-  AUTHOR
-}
+  console.log(product);
+  console.log(product.details.name, product.details.description);
 
-const user = {
-  name: "Nobunaga",
-  age: 47,
-  hobbies: ["Agitation", "Cuckoo"],
-  role: Role.ADMIN
-}
+  enum Role {
+    ADMIN,
+    READ_ONLY,
+    AUTHOR,
+  }
 
-if (user.role === Role.ADMIN) {
-  console.log("管理者：", user.name);
+  const user = {
+    name: "Nobunaga",
+    age: 47,
+    hobbies: ["Agitation", "Cuckoo"],
+    role: Role.ADMIN,
+  };
+
+  if (user.role === Role.ADMIN) {
+    console.log("管理者：", user.name);
+  }
 }
