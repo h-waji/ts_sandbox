@@ -1,20 +1,21 @@
-// namespace Sandbox05 {
-//   console.log("----- 05 -----");
+namespace Sandbox05 {
+  console.log("----- 05 -----");
 
-//   let userInput: unknown; // 型チェックの強制
-//   let userName: string;
+  let userInput: unknown;
+  let userName: string;
 
-//   userInput = 5;
-//   userInput = "hoge";
+  userInput = 100;
+  userInput = "Miku";
 
-//   if (typeof userInput === "string") {
-//     userName = userInput;
-//   }
+  if (typeof userInput === "string") {
+    userName = userInput;
+    console.log(userName);
+  }
 
-//   function generateError(message: string, code: number): never { 
-//     throw { message: message, errorCode: code };
-//   }
+  function generateError(message: string, code: number): never {
+    throw { message: message, errorCode: code };
+  }
 
-//   const result = generateError("エラーが発生しました", 500);
-//   console.log(result);
-// }
+  const result = generateError("エラーが発生しました", 500);
+  console.log("----- end -----");
+}
