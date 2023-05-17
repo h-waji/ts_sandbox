@@ -1,27 +1,26 @@
-// namespace Sandbox04 {
-//   console.log("----- 04 -----");
+namespace Sandbox04 {
+  console.log("----- 04 -----");
 
-//   function add(n1: number, n2: number) {
-//     return n1 + n2;
-//   }
+  function add(n1: number, n2: number) {
+    return n1 + n2;
+  }
 
-//   function printResult(num: number) {
-//     console.log('Result: ' + num);
-//   }
+  function printResult(num: number) {
+    console.log('Result: ' + num);
+  }
 
-//   printResult(add(4, 1));
+  printResult(add(5, 17));
 
-//   let combineValues: (a: number, b: number) => number;
-//   combineValues = add;
-//   console.log(combineValues(10, 22));
+  let combineValues: (a: number, b: number) => number;
+  combineValues = add;
+  console.log(combineValues(2023, 517));
 
-//   function addAndHandle(n1: number, n2: number, cb: (num: number) => void) {
-//     const result = n1 + n2;
-//     cb(result);
-//   }
+  function addAndHandle(n1: number, n2: number, cb: (num: number) => void) {
+    const sum = n1 + n2;
+    cb(sum);
+  }
 
-//   addAndHandle(10, 20, (result) => {
-//     console.log(result);
-//     return result;
-//   });
-// }
+  addAndHandle(20, 23, (n) => {
+    console.log(n);
+  });
+}
