@@ -1,21 +1,25 @@
-// namespace Sandbox07 {
-//   console.log("----- 07 -----");
+namespace Sandbox07 {
+  console.log("----- 07 -----");
 
-//   const hobbies = ['Sports', 'Cooking'];
-//   const activeHobbies = ['Socker'];
+  const singers = ['Rin', 'Len'];
+  const vocaloid = ['Miku'];
 
-//   // activeHobbies.push(hobbies[0], hobbies[1]);
-//   activeHobbies.push(...hobbies);
-//   console.log(activeHobbies);
+  // vocaloid.push(singers[0], singers[1]);
+  vocaloid.push(...singers);
+  console.log(vocaloid);
 
-//   const person = {
-//     name: 'Obama', 
-//     age: 61, 
-//   };
+  const person = {
+    name: 'Obama', 
+    age: 61, 
+  };
 
-//   const copiedPerson = {
-//     ...person,
-//   };
+  // const copiedPerson = person; // ポインタを渡しているだけ
+  const copiedPerson = {
+    ...person,
+  };
 
-//   console.log(copiedPerson);
-// }
+  person.name = 'Colonel Sanders';
+  person.age = 65;
+  console.log(copiedPerson);
+  console.log(person);
+}
